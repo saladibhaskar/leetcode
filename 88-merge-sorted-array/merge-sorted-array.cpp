@@ -25,13 +25,11 @@ public:
             j++;
         }
         i=0;
+        n1.clear();
         while(i<v.size())
         {
-            n1[i]=v[i];
+            n1.push_back(v[i]);
             i++;
-        } 
-
-
-
+        }
     }
 };
