@@ -4,7 +4,7 @@ public:
        int i=0;
         int j=0;
         vector<int>v;
-        while(i<m and j<n)
+        while(i<m && j<n)
         {
             if(n1[i]<=n2[j]){
                 v.push_back(n1[i]);
@@ -25,10 +25,9 @@ public:
             j++;
         }
         i=0;
-        n1.clear();
         while(i<v.size())
         {
-            n1.push_back(v[i]);
+            n1[i]=v[i];
             i++;
         }
     }
