@@ -21,7 +21,6 @@ public:
               j++;
           }
           res.push_back(v);
-          
           v.clear();  
     }
     return res;
