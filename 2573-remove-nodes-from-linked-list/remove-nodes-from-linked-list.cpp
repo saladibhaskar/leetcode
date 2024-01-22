@@ -52,7 +52,7 @@ public:
         while(!st2.empty())
         {
             ListNode *d=new ListNode(st2.top());
-            cout<<st2.top()<<" ";
+            //cout<<st2.top()<<" ";
             tem->next=d;
             tem=tem->next;;
             st2.pop();
