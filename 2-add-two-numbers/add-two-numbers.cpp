@@ -30,8 +30,9 @@ public:
             sum=sum+carry;
             carry=sum/10;
             int rem=sum%10;
-            temp->next=new ListNode(rem);
-            
+
+            ListNode* ele=new ListNode(rem);
+            temp->next=ele;
             temp=temp->next;
 
         }
