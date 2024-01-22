@@ -1,4 +1,4 @@
-/**
+ /**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
@@ -39,15 +39,25 @@ public:
                 }
             }
         }
-        ListNode *res= NULL;
+        ListNode *res= new ListNode(0);
+        ListNode *tem=res;
+        stack<int>st2;
+
         while(!st.empty())
         {
-            ListNode *k=new ListNode(st.top());
-            k->next=res;
-            res=k;
+            st2.push(st.top());
+            // cout<<st.top()<<" ";
             st.pop();
         }
-        return res;
+        while(!st2.empty())
+        {
+            ListNode *d=new ListNode(st2.top());
+            //cout<<st2.top()<<" ";
+            tem->next=d;
+            tem=tem->next;;
+            st2.pop();
+        }
+        return res->next;
 
     }
 };
