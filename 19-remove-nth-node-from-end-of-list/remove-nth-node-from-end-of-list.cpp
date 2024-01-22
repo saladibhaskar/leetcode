@@ -45,7 +45,7 @@ public:
         {
             return head->next;
         }
-        if(temp->next==NULL)
+        else if(temp->next==NULL)
         {
               temp=NULL;
         }
