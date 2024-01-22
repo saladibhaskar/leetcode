@@ -4,20 +4,15 @@ public:
         vector<int>v;
         int sum=0;
         int c=0;
+        map<int ,int>mp;
         for(int i=0;i<a.size();i++)
         {
-            for(int j=0;j<a.size();j++){
-             if(a[i]==a[j] && i!=j)
-             {
-                 v.push_back(a[i]);
-                 c+=1;
-                 break;
-             }
+            mp[a[i]]+=1;
+            if(mp[a[i]]==2)
+            {
+                v.push_back(a[i]);
+                break;
             }
-             if(c==1)
-             {
-                 break;
-             }
         }
         for(int i=0;i<a.size();i++)
         {
