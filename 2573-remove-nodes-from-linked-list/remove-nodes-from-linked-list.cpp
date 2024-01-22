@@ -40,26 +40,13 @@ public:
             }
         }
         ListNode *res= NULL;
-        //ListNode *tem=res;
-        stack<int>st2;
-
         while(!st.empty())
         {
-            //st2.push(st.top());
-            // cout<<st.top()<<" ";
             ListNode *k=new ListNode(st.top());
             k->next=res;
             res=k;
             st.pop();
         }
-        // while(!st2.empty())
-        // {
-        //     ListNode *d=new ListNode(st2.top());
-        //     //cout<<st2.top()<<" ";
-        //     tem->next=d;
-        //     tem=tem->next;;
-        //     st2.pop();
-        // }
         return res;
 
     }
