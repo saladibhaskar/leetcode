@@ -12,7 +12,7 @@ public:
         ListNode *temp=head;
         ListNode *s1=head;
         ListNode *s2=head;
-        if(head==NULL  )
+        if(head==NULL  || head->next==NULL )
         {
             return false;
         }
@@ -20,8 +20,7 @@ public:
         {
             s1=s1->next;
             s2=s2->next->next;
-            if( s1==s2)
-            {
+            if( s1==s2){
                 return true;
             }
         }
