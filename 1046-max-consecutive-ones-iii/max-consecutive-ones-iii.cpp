@@ -22,6 +22,10 @@ public:
              }
              j++;
          }
-         return j-i;
+         if(j-i>mx)
+         {
+             mx=j-i;
+         }
+         return mx;
     }
 };
