@@ -6,8 +6,8 @@ public:
        int l=ln-1;
        for(int i=1;i<=ln;i++)
        {
-           int b=pow(10,l);
-           s+=i*b;
+           s*=10;
+           s+=i;
            l--;
        }
        return s;
@@ -18,9 +18,8 @@ public:
        int l=ln-1;
        for(int i=1;i<=ln;i++)
        {
-           int b=pow(10,l);
-           s+=1*b;
-           l--;
+            s*=10;
+            s+=1;
        }
        return s;      
    }
