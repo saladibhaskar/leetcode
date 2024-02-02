@@ -22,8 +22,7 @@ public:
            s+=1*b;
            l--;
        }
-       return s;
-        
+       return s;      
    }
     vector<int> sequentialDigits(int low, int high) {
         string s=to_string(low);
