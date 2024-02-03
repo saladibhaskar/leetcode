@@ -12,6 +12,8 @@ public:
        }
        if (p1[0]==10) sum1+=p1[1]*2;
        else sum1+=p1[1];
+       if (p2[0]==10) sum2+=p2[1]*2;
+       else sum2+=p2[1];
         while(i<p1.size()){
 
             if(p1[i-1]==10 || p1[i-2]==10)
@@ -21,13 +23,6 @@ public:
             {
                 sum1+=p1[i];
             }
-            i++;
-        }
-        i=2;
-        if (p2[0]==10) sum2+=p2[1]*2;
-        else sum2+=p2[1];
-         while(i<p2.size()){
-
             if(p2[i-1]==10 || p2[i-2]==10)
             {
                 sum2+=2*p2[i];
@@ -37,9 +32,6 @@ public:
             }
             i++;
         }
-        
-         
-       // cout<<s1<<" "<<s2<<" ";
         if(sum1>sum2) return 1;
         else if(sum1<sum2) return 2;
         return 0;
