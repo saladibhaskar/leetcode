@@ -7,8 +7,7 @@ public:
        {
         if(sum1>sum2) return 1;
         else if(sum1<sum2) return 2;
-        return 0;
-           
+        return 0;   
        }
        if (p1[0]==10) sum1+=p1[1]*2;
        else sum1+=p1[1];
@@ -25,7 +24,7 @@ public:
             }
             if(p2[i-1]==10 || p2[i-2]==10)
             {
-                sum2+=2*p2[i];
+                sum2+=p2[i]*2;
             }else
             {
                 sum2+=p2[i];
