@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void comb(vector<int>&v ,vector<int >v1,vector<vector<int>>&ans,int t,int i,int sm=0)
+    void comb(vector<int>&v ,vector<int >&v1,vector<vector<int>>&ans,int t,int i,int sm=0)
     {
         if(sm==t)
         {
