@@ -21,9 +21,7 @@ public:
         sort(candidates.begin(),candidates.end());
         comb(candidates,v1,target,0);
         vector<vector<int>>vec;
-        for(auto it:ans){
-            vec.push_back(it);
-        }
+        for(auto it:ans) vec.push_back(it);
         return vec;
     }
 };
