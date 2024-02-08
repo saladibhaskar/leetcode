@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>>ans;
-    void bombit(vector<int>&v,vector<int>&v1,int k,int i=0,int sm=0)
+    void bombit(vector<int>&v,vector<int>&v1,int k,int i=0)
     {
         if(v1.size()==k)
         {
@@ -10,9 +10,9 @@ public:
         }
         if(i>=v.size()) return;
         v1.push_back(v[i]);
-        bombit(v,v1,k,i+1,sm+v[i]);
+        bombit(v,v1,k,i+1);
         v1.pop_back();
-        bombit(v,v1,k,i+1,sm);
+        bombit(v,v1,k,i+1);
     }
     vector<vector<int>> combine(int n, int k) {
         vector<int>v;
