@@ -17,7 +17,6 @@ public:
     vector<vector<int>> combine(int n, int k) {
         vector<int>v;
         vector<int>v1;
-        vector<vector<int>>as;
         for(int i=1;i<=n;i++)
         {
             v.push_back(i);
