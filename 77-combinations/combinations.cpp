@@ -1,11 +1,11 @@
 class Solution {
 public:
-    set<vector<int>>ans;
+    vector<vector<int>>ans;
     void bombit(vector<int>&v,vector<int>&v1,int k,int i=0,int sm=0)
     {
         if(v1.size()==k)
         {
-            ans.insert(v1);
+            ans.push_back(v1);
             return;
         }
         if(i>=v.size()) return;
@@ -21,14 +21,8 @@ public:
         for(int i=1;i<=n;i++)
         {
             v.push_back(i);
-        }
-         
+        }  
         bombit(v,v1,k);
-        for(auto it:ans)
-        {
-            as.push_back(it);
-        }
-        cout<<ans.size();
-        return as;
+        return ans;
     }
 };
