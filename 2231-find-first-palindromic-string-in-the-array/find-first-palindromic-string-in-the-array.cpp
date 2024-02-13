@@ -14,11 +14,11 @@ public:
     }
     string firstPalindrome(vector<string>&a) {
         int i=0;
-        for( i=0;i<a.size();i++)
+        for(auto it:a)
         {
-           if(pal(a[i]))
+           if(pal(it))
             {
-                return a[i];
+                return it;
             }
         }
         return "";
