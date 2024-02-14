@@ -16,7 +16,7 @@ public:
                 }  
             }
         }
-if(c==0)return false;
-else return true;
+    if(c==0)return false;
+    else return true;
     }
 };
