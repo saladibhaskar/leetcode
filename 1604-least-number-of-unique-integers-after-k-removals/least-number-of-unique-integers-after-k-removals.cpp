@@ -13,7 +13,7 @@ public:
             mp2.push_back(it.second);
         }
         sort(mp2.begin(),mp2.end());
-        while(true){
+        while(k!=0){
             if(k<mp2[0])
             {
                 break;
