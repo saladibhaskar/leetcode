@@ -8,29 +8,22 @@ public:
             mp1[arr[i]]+=1;
              
         }
-        for(auto it:mp1)
+        for(auto &it:mp1)
         {
             mp2.push_back(it.second);
-             //cout<<it.second;
-            
         }
         sort(mp2.begin(),mp2.end());
         while(true){
-            cout<<mp2.size();
             if(k<mp2[0])
             {
-                //cout<<k;
                 break;
             }
             else if(k==mp2[0])
             {
-                //cout<<k;
-                k=0;
               mp2.erase(mp2.begin());
-              //break;
+              break;
             }else if(k>mp2[0])
             {
-                //cout<<k;
                 k-=mp2[0];
                 mp2.erase(mp2.begin());
             }
