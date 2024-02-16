@@ -13,23 +13,26 @@ public:
             mp2.push_back(it.second);
         }
         sort(mp2.begin(),mp2.end());
-        while(k!=0){
-            if(k<mp2[0])
+        int c=mp2.size();
+        for(int i=0;i<mp2.size();i++){
+            if(k<mp2[i])
             {
                 break;
             }
-            else if(k==mp2[0])
+            else if(k==mp2[i])
             {
-              mp2.erase(mp2.begin());
+                c--;
+             // mp2.erase(mp2.begin());
               break;
-            }else if(k>mp2[0])
+            }else if(k>mp2[i])
             {
-                k-=mp2[0];
-                mp2.erase(mp2.begin());
+                k-=mp2[i];
+                c--;
+                //mp2.erase(mp2.begin());
             }
            
         }
-        return mp2.size();
+        return c;
 
         
     }
