@@ -7,7 +7,6 @@ public:
         {
             mp[t[i][1]]+=1;
             mp2[t[i][0]]+=1;
-            //cout<<t[i][0]<<" "<<t[i][1]<<" ";
         }
         int c=0,i;
         for( i=1;i<=n;i++)
