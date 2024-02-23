@@ -2,7 +2,7 @@ class Solution {
 public:
     int maxProfit(vector<int>& p) {
       int min= p[0];
-      p.erase(p.begin());
+      //p.erase(p.begin());
       int max=0;
       for(auto i:p)
       {
