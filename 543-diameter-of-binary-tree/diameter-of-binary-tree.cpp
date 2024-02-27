@@ -1,4 +1,4 @@
- /**
+/**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -9,30 +9,41 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-
 class Solution {
 public:
-    int diameterOfBinaryTree(TreeNode* root) {
-        int diameter = 0;
-        calculateDiameter(root, diameter);
-        return diameter;
+    int mx=1,tx=0;
+    void bombit(TreeNode*root,int c=1 )
+    {
+        if(root==NULL) return;
+        if(c>mx)mx=c;
+        bombit(root->left,c+1);
+        bombit(root->right,c+1);
     }
-
-
-    int calculateDiameter(TreeNode* root, int& diameter) {
-        if (!root) {
-            return 0;
+    void findit(TreeNode*root)
+    {
+        if(root!=NULL)
+        {
+        mx=1;
+        int a=0,b=0;
+        if(root->left !=NULL)
+        {
+            bombit(root->left);
+            a=mx;
         }
-
-        // Recursively calculate the height of the left and right subtrees
-        int leftHeight = calculateDiameter(root->left, diameter);
-        int rightHeight = calculateDiameter(root->right, diameter);
-
-        // Update the diameter if the current node's diameter is greater
-        diameter = max(diameter, leftHeight + rightHeight);
-
-        // Return the height of the current subtree
-        return 1 + max(leftHeight, rightHeight);
+        mx=1;
+       if(root->right!=NULL) 
+       {
+           bombit(root->right);
+           b=mx;
+       }
+       if(a+b>tx)tx=a+b;
+       findit(root->left);
+       findit(root->right);
+        }
+    }
+    int diameterOfBinaryTree(TreeNode* root) {
+        mx=1;
+        findit(root);
+        return tx;
     }
 };
-    
