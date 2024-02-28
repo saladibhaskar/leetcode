@@ -25,6 +25,8 @@ public:
         return;
     }
     int findBottomLeftValue(TreeNode* root) {
+        mx=0;
+        ele=0;
         bombit(root);
         return ele;
     }
