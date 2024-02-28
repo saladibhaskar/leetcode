@@ -14,6 +14,7 @@ public:
     int mx=0,ele=0;
     void bombit(TreeNode*root,int c=1)
     {
+        if(root==NULL)return;
         if(root!=NULL){
             if(c>mx){
                 mx=c;
@@ -22,7 +23,6 @@ public:
             bombit(root->left,c+1);
             bombit(root->right,c+1);
         }
-        return;
     }
     int findBottomLeftValue(TreeNode* root) {
         mx=0;
