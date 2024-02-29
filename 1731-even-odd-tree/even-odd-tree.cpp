@@ -45,7 +45,6 @@ public:
                 }
             }
             c++;
-            n=0;
         }
         return true;
     }
