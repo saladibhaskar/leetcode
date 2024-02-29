@@ -18,7 +18,7 @@ public:
         while(!q.empty())
         {
             int s=q.size();
-            vector<int>v;
+            int n=0;
             while(s--)
             {
                 TreeNode*temp=q.front();
@@ -28,29 +28,24 @@ public:
                 if(c%2!=0)
                 {
                    if((temp->val)%2==0){
-                       if(v.empty()) v.push_back(temp->val);
-                       else if(v[v.size()-1]>temp->val) v.push_back(temp->val);
+                       if(n==0) n=(temp->val);
+                       else if(n>temp->val) n=(temp->val);
                        else return false;
-                   }else
-                   {
-                       return false;
                    }
+                   else return false;
                 }else
                 {
                     if((temp->val)%2!=0)
                     {
-                        if(v.empty()) v.push_back(temp->val);
-                        else if(v[v.size()-1]<temp->val) v.push_back(temp->val);
+                        if(n==0) n=(temp->val);
+                        else if(n<temp->val)n=(temp->val);
                         else return false;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    else return false;
                 }
             }
             c++;
-            v.clear();
+            n=0;
         }
         return true;
     }
