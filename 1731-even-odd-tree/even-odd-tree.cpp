@@ -38,7 +38,7 @@ public:
                     if((temp->val)%2!=0)
                     {
                         if(n==0) n=(temp->val);
-                        else if(n<temp->val)n=(temp->val);
+                        else if(n<temp->val) n=(temp->val);
                         else return false;
                     }
                     else return false;
