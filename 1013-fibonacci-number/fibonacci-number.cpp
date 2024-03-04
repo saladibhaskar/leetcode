@@ -18,10 +18,7 @@ public:
 
     }
     int fib(int n) {
-        if(sb.size()<n+1)
-        {
-            sb.assign(n+1,-1);
-        }
+        sb.assign(n+1,-1);
        return fibo(n);
     }
 };
