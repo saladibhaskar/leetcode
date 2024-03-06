@@ -5,15 +5,12 @@ public:
         for(i=1;i<nums.size();i++)
         {
             if(nums[i]>nums[i-1]){
-                c++;
                 sm+=nums[i];
                 if(sm >ms){
                     ms=sm;
-                    mx=c;
                 }
             }
             else{
-                c=1;
                 sm=nums[i];
             }
         }
