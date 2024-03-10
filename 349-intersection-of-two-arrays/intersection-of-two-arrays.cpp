@@ -7,21 +7,15 @@ public:
         {
            mp[nums1[i]]+=1;
         }
-        set<int>st;
+        vector<int>v;
         for(i=0;i<nums2.size();i++)
         {
             if(mp.find(nums2[i])!=mp.end())
             {
-              st.insert(nums2[i]);
+              v.push_back(nums2[i]);
+              mp.erase(nums2[i]);
             }
         }
-        vector<int>a;
-        i=0;
-        for(auto it:st)
-        {
-            a.push_back(it);
-            i++;
-        }
-        return a;
+        return v;
     }
 };
