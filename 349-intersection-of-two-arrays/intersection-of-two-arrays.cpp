@@ -10,6 +10,7 @@ public:
         vector<int>v;
         for(i=0;i<nums2.size();i++)
         {
+            if(mp.size()==0)break;
             if(mp.find(nums2[i])!=mp.end())
             {
               v.push_back(nums2[i]);
