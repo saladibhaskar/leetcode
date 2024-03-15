@@ -14,27 +14,10 @@ public:
         if(c>1)return v;
         for(i=0;i<nums.size();i++)
         {
-            if(nums[i]==0)
-            {
-                nums[i]=pr;
-            }else if(nums[i]<0)
-            {
-                 if(c>=1)
-                 {
-                   nums[i]=0;
-                 }else
-                 {
-                    nums[i]=(pr)/nums[i];
-                 }
-            }
-            else
-            {
-                 if(c>=1)
-                 {
-                   nums[i]=0;
-                 }else{
-                nums[i]=pr/nums[i];}
-            }
+            if(nums[i]==0) nums[i]=pr;
+            else if(c>=1)  nums[i]=0;
+            else if(nums[i]<0) nums[i]=(pr)/nums[i];
+            else nums[i]=pr/nums[i];
         }
         return nums;
     }
