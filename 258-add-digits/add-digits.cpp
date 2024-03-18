@@ -1,14 +1,10 @@
 class Solution {
 public:
-    int addDigits(int num) {
-        if(num<=9)return num;
-        int n=num;
-        int sm=0;
-        while(n!=0)
-        {
-          sm+=n%10;
-          n/=10;
-        }
-        return addDigits(sm);
+     
+    int addDigits(int n) {
+          if(n==0) return 0;
+           return (n % 9 == 0) ? 9 : (n % 9);
+        
+        
     }
 };
