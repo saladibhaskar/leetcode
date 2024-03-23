@@ -20,27 +20,18 @@ public:
         }
         int i=0,j=v.size()-1;
         temp=head;
-        // for(auto it:v)
-        // {
-        //     cout<<it->val<<" ";
-        // }
-       // cout<<v.size();
         while(i<j)
         {
-            ListNode*an=v[j];
-            temp->next=an;
+            temp->next=v[j];
             temp=temp->next;
             j--;
             i++;
-             ListNode*as=v[i];
-            temp->next=as;
-            if(i==v.size()/2)
-            {
+            temp->next=v[i];
+            if(i==v.size()/2){
                 temp->next=NULL;
                 break;
             }
             temp=temp->next;
-            cout<<an->val<<"s"<<as->val<<" ";
         }
         if(v.size()%2!=0)
         {
