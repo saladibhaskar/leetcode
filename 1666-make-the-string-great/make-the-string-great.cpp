@@ -2,18 +2,25 @@ class Solution {
 public:
     string makeGood(string s) {
        int i=0,c=0;
-        while(i<s.size()-1 && !s.empty())
+       stack<char>st;
+       while(i<s.size())
+       {
+        if(st.empty()) st.push(s[i]);
+        else
         {
-            int a=s[i],b=s[i+1];
-            if(a==b+32 || b==a+32)
-            {
-                s.erase(i,2);
-                c++;
-            }
-            else i++;
+            int a=s[i],b=st.top();
+            if(a==b+32 || b==a+32) st.pop();
+            else st.push(s[i]);
         }
-        if(c==0) return s;
-        else return makeGood(s);
+        i++;
+       }
+       s.clear();
+       while(!st.empty())
+       {
+        s=st.top()+s;
+        st.pop();
+       }
+       return s;
          
     }
 };
