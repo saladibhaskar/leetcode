@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool check(string s,int i,int j,int c=0)
+    bool check(string s,int i,int j)
     {
         while(i<j)
         {
@@ -10,20 +10,17 @@ public:
             }else return false;
         }
         return true;
-
     }
     bool validPalindrome(string s) {
-        int  i=0,j=s.size()-1,c=0;
+        int  i=0,j=s.size()-1;
         while(i<j)
         {
             if(s[i]!=s[j])
             {
                 return check(s,i+1,j) || check(s,i,j-1);
-            }else
-            {
+            }
                 i++;
                 j--;
-            }
         }
         return true;
  
