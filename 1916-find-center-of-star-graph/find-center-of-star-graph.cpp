@@ -15,6 +15,7 @@ public:
                 mx=it.second;
                 e=it.first;
             }
+            if(mx==edges.size())break;
         }
         return e;
 
