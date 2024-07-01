@@ -6,7 +6,7 @@ public:
         {
             if(a[i]%2!=0)
             {
-                if(a[i+1]%2!=0 && a[i+1]%2!=0 && a[i+2]%2!=0 )return true;
+                if(a[i+1]%2!=0 && a[i+2]%2!=0)return true;
             }
         }
         return false;
