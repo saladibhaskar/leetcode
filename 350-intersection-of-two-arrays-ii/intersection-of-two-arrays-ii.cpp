@@ -16,7 +16,7 @@ public:
                 {
                     v.push_back(nums2[i]);
                     mp[nums2[i]]-=1;
-                    if(nums2[i]<=0)mp.erase(nums2[i]);
+                     
                 }
             }
         }
