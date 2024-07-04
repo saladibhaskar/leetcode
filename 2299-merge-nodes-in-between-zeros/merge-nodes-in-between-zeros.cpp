@@ -30,8 +30,6 @@ public:
         }
         head=head->next;
     }
-    //ListNode* nd=new ListNode(sm);
-    //temp->next=nd;
     return ans->next;
 
         
