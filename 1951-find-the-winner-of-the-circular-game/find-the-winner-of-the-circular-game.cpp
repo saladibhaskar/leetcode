@@ -5,9 +5,11 @@ public:
         iota(v.begin(),v.end(),1);
         int i=0,s=0;
         while(v.size()!=1)
-        {  
-            s=(s+k-1)%v.size();
-            cout<<s;
+        {
+             
+            s+=k;
+            s-=1;
+            s%=v.size();
             v.erase(v.begin()+s);
         }
         return v[0];
