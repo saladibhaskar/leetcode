@@ -16,7 +16,6 @@ public:
                 sm+=(time+curtime-arv);
                 curtime+=time;
             }
-            cout<<sm<<" ";
               
         }
         double n=customers.size();
