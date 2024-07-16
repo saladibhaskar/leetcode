@@ -6,7 +6,7 @@ public:
         while(empty>=numExchange)
         {
             drinked+=(empty/numExchange);
-            empty=empty/numExchange+empty%numExchange;
+            empty=(empty/numExchange)+(empty%numExchange);
         }
         return drinked;
     }
