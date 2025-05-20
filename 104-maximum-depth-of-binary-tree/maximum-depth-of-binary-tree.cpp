@@ -11,21 +11,20 @@
  */
 class Solution {
 public:
-void ino(TreeNode *root,int cnt,int &mx)
-    {
-        if(root!=NULL)
-        {
-           if(cnt>mx) mx=cnt;
-           ino(root->left,cnt+1,mx);
-           ino(root->right,cnt+1,mx);
-            
+    int maxdep(TreeNode* root){
+        if(root == NULL){
+            return 0;
         }
+        int rightheight=maxdep(root->right);
+        int leftheight=maxdep(root->left);
+
+        int maxheight=max(rightheight,leftheight)+1;
+        return maxheight;
+
     }
     int maxDepth(TreeNode* root) {
-        int cnt=0;
-        int mx=0;
-        if(root==NULL)return 0;
-        ino(root,cnt,mx);
-        return mx+1;
+
+        return maxdep(root);
+        
     }
 };
